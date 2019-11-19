@@ -1,0 +1,1172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MouseDrvClass</class>
+ <widget class="QMainWindow" name="MouseDrvClass">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MouseDrv</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralWidget{
+	background-image: url(:/MouseDrv/skins/main_nr.png);
+}
+QLabel{
+    color: lightgray;
+}
+QPushButton{
+    color: lightgray;
+    border:none;
+    background:url(:/MouseDrv/skins/keybtn_nr.png);
+}
+QPushButton:hover{
+    color: white;
+    background:url(:/MouseDrv/skins/keybtn_ov.png);
+}
+#btnRecover,#btnSave,#btnSaveDefine{
+    background:url(:/MouseDrv/skins/btn_nr.png);
+ }
+#btnRecover:hover,#btnSave:hover,#btnSaveDefine:hover{
+	background:url(:/MouseDrv/skins/btn_ov.png);
+ }
+#btnMin{
+    background:url(:/MouseDrv/skins/min_nr.png);
+ }
+#btnMin:hover{
+    background:url(:/MouseDrv/skins/min_ov.png);
+ }
+#btnExit{
+    background:url(:/MouseDrv/skins/exit_nr.png);
+ }
+#btnExit:hover{
+    background:url(:/MouseDrv/skins/exit_ov.png);
+ }
+#btnSetKey,#btnSetDpi,#btnSetMouse,#btnSetDefine{
+	color: lightgray;
+	background:rgba(255,0,0,0)
+}
+#btnSetKey:hover,#btnSetDpi:hover,#btnSetMouse:hover,#btnSetDefine:hover{
+	color: white;
+}
+#btnStartDefine{
+    background:url(:/MouseDrv/skins/recbtn_nr.png);
+}
+#btnProfileSet{
+    background:url(:/MouseDrv/skins/btn2_nr.png);
+}
+#btnProfileSet:hover{
+    background:url(:/MouseDrv/skins/btn2_ov.png);
+}
+#btnProfileSel,#btnLed,#btnFreq{
+    background:url(:/MouseDrv/skins/combo_nr.png);
+}
+#btnProfileSel:hover,#btnLed:hover,#btnFreq:hover{
+    background:url(:/MouseDrv/skins/combo_ov.png);
+}
+QCheckBox{
+    color: lightgray;
+}
+QRadioButton{
+    color: lightgray;
+}
+QTreeWidget{
+	background:transparent;
+	color: lightgray;
+}
+QTreeWidget::item:selected{ 
+	color:white; 
+	background-color:rgb(0,0,100);
+} 
+QListWidget{
+	background:transparent;
+	color: lightgray;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>140</y>
+      <width>781</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="pageKey">
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>10</y>
+        <width>218</width>
+        <height>330</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="mousedrv.qrc">:/MouseDrv/skins/mouse_nr.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QWidget" name="keyWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>20</y>
+        <width>231</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="mousedrv.qrc">:/MouseDrv/skins/number6.png</pixmap>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QPushButton" name="btnKey9">
+         <property name="minimumSize">
+          <size>
+           <width>151</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>向下滚</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>88</width>
+           <height>35</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="mousedrv.qrc">:/MouseDrv/skins/number1.png</pixmap>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="btnKey1">
+         <property name="minimumSize">
+          <size>
+           <width>151</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>左键</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>88</width>
+           <height>35</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="mousedrv.qrc">:/MouseDrv/skins/number2.png</pixmap>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="btnKey2">
+         <property name="minimumSize">
+          <size>
+           <width>151</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>右键</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>88</width>
+           <height>35</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="mousedrv.qrc">:/MouseDrv/skins/number3.png</pixmap>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="btnKey3">
+         <property name="minimumSize">
+          <size>
+           <width>151</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>中键</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>88</width>
+           <height>35</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="mousedrv.qrc">:/MouseDrv/skins/number4.png</pixmap>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="btnKey4">
+         <property name="minimumSize">
+          <size>
+           <width>151</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>前进</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>88</width>
+           <height>35</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="mousedrv.qrc">:/MouseDrv/skins/number5.png</pixmap>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="btnKey5">
+         <property name="minimumSize">
+          <size>
+           <width>151</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>后退</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>88</width>
+           <height>35</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QPushButton" name="btnKey6">
+         <property name="minimumSize">
+          <size>
+           <width>151</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>DPI -</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>88</width>
+           <height>35</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="mousedrv.qrc">:/MouseDrv/skins/number8.png</pixmap>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QPushButton" name="btnKey8">
+         <property name="minimumSize">
+          <size>
+           <width>151</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>向上滚</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>88</width>
+           <height>35</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="mousedrv.qrc">:/MouseDrv/skins/number9.png</pixmap>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="mousedrv.qrc">:/MouseDrv/skins/number7.png</pixmap>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QPushButton" name="btnKey7">
+         <property name="minimumSize">
+          <size>
+           <width>151</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>DPI +</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageDPI">
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>30</y>
+        <width>54</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开启/禁用</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DPI-调节鼠标的定位精度</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>30</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DPI颜色</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkBoxDPI1">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>54</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DPI 1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkBoxDPI2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>94</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DPI 2</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkBoxDPI3">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>134</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DPI 3</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkBoxDPI4">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>174</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DPI 4</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkBoxDPI5">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>214</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DPI 5</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkBoxDPI6">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>255</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DPI 6</string>
+      </property>
+     </widget>
+     <widget class="SliderClick" name="sliderDPI1">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>60</y>
+        <width>251</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="SliderClick" name="sliderDPI2">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>100</y>
+        <width>251</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="SliderClick" name="sliderDPI3">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>140</y>
+        <width>251</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="SliderClick" name="sliderDPI4">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>180</y>
+        <width>251</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="SliderClick" name="sliderDPI5">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>220</y>
+        <width>251</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="SliderClick" name="sliderDPI6">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>260</y>
+        <width>251</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="ColorButton" name="btnDPIColor1">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>55</y>
+        <width>42</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="ColorButton" name="btnDPIColor2">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>95</y>
+        <width>42</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="ColorButton" name="btnDPIColor3">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>135</y>
+        <width>42</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="ColorButton" name="btnDPIColor4">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>175</y>
+        <width>42</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="ColorButton" name="btnDPIColor5">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>215</y>
+        <width>42</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="ColorButton" name="btnDPIColor6">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>255</y>
+        <width>42</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelDPI1">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>60</y>
+        <width>54</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开启/禁用</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelDPI2">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>100</y>
+        <width>54</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开启/禁用</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelDPI3">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>140</y>
+        <width>54</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开启/禁用</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelDPI4">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>181</y>
+        <width>54</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开启/禁用</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelDPI5">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>220</y>
+        <width>54</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开启/禁用</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelDPI6">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>260</y>
+        <width>54</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开启/禁用</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageMouse">
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>20</y>
+        <width>54</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>灯效</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>110</y>
+        <width>54</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>灯光速度</string>
+      </property>
+     </widget>
+     <widget class="SliderClick" name="sliderLedSpeed">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>140</y>
+        <width>251</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>32</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelLedSpeed">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>140</y>
+        <width>54</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_30">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>190</y>
+        <width>191</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>刷新率-鼠标向PC发送数据的频率</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnLed">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>50</y>
+        <width>150</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>呼吸模式</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnFreq">
+      <property name="geometry">
+       <rect>
+        <x>49</x>
+        <y>220</y>
+        <width>150</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>500 Hz</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageDefine">
+     <widget class="QLabel" name="label_31">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>54</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>宏列表</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_32">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>30</y>
+        <width>54</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>按键列表</string>
+      </property>
+     </widget>
+     <widget class="QTreeWidget" name="treeDefineList">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>60</y>
+        <width>151</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <attribute name="headerVisible">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string notr="true">1</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QListWidget" name="treeKeyList">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>60</y>
+        <width>151</width>
+        <height>241</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnStartDefine">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>30</y>
+        <width>150</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开始录制宏</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSaveDefine">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>280</y>
+        <width>88</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>保存</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>70</y>
+        <width>171</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QCheckBox" name="checkBoxAutoDelay">
+         <property name="text">
+          <string>自动插入延时</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBoxRecordKey">
+         <property name="text">
+          <string>记录键盘</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBoxRecordMouse">
+         <property name="text">
+          <string>记录鼠标</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioDefineType1">
+         <property name="text">
+          <string>循环直到按键松开</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioDefineType2">
+         <property name="text">
+          <string>循环直到任意键按下</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioDefineType3">
+         <property name="text">
+          <string>指定循环次数(1~255)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineDefineRelay">
+         <property name="text">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>43</x>
+      <y>626</y>
+      <width>411</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>驱动版本  版权所有</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnRecover">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>570</y>
+      <width>88</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>恢复出厂设置</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSave">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>570</y>
+      <width>88</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnExit">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>60</y>
+      <width>27</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnMin">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>60</y>
+      <width>27</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSetKey">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>100</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>按键设置</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSetDpi">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>100</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DPI设置</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSetMouse">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>100</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>鼠标参数</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSetDefine">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>100</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>宏定义</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_33">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>550</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>选择配置文件</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnProfileSet">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>580</y>
+      <width>52</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnProfileSel">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>580</y>
+      <width>150</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ColorButton</class>
+   <extends>QPushButton</extends>
+   <header>ColorButton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>SliderClick</class>
+   <extends>QSlider</extends>
+   <header>ColorButton.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="mousedrv.qrc"/>
+ </resources>
+ <connections/>
+</ui>

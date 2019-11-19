@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Define_Dialog</class>
+ <widget class="QDialog" name="Define_Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>412</width>
+    <height>488</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Define_Dialog{
+	background-image: url(:/MouseDrv/skins/msg2_nr.png);
+}
+QLabel{
+    color: lightgray;
+}
+QPushButton{
+    color: lightgray;
+    font: bold 10pt;
+    border:none;
+    background:url(:/MouseDrv/skins/btn_nr.png);
+}
+QPushButton:hover{
+    background:url(:/MouseDrv/skins/btn_ov.png);
+}
+#btnExit{
+    background:url(:/MouseDrv/skins/exit_nr.png);
+}
+#btnExit:hover{
+    background:url(:/MouseDrv/skins/exit_ov.png);
+}
+QTreeWidget{
+	background:transparent;
+	color: lightgray;
+}
+QTreeWidget::item:selected{ 
+	color:white; 
+	background-color:rgb(0,0,100);
+} </string>
+  </property>
+  <widget class="QPushButton" name="btnCancel">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>440</y>
+     <width>88</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnExit">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>20</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnOk">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>440</y>
+     <width>88</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确定</string>
+   </property>
+  </widget>
+  <widget class="QTreeWidget" name="treeWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>100</y>
+     <width>301</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <attribute name="headerVisible">
+    <bool>false</bool>
+   </attribute>
+   <column>
+    <property name="text">
+     <string notr="true">1</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>74</y>
+     <width>54</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>宏列表</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="mousedrv.qrc"/>
+ </resources>
+ <connections/>
+</ui>

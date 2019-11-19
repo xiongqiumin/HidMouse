@@ -1,0 +1,37 @@
+<RCC>
+  <qresource prefix="MouseDrv">
+    <file>skins/msg2_nr.png</file>
+    <file>skins/close.png</file>
+    <file>skins/open.png</file>
+    <file>skins/msg_nr.png</file>
+    <file>skins/combo_nr.png</file>
+    <file>skins/combo_ov.png</file>
+    <file>skins/btn2_nr.png</file>
+    <file>skins/btn2_ov.png</file>
+    <file>skins/recbtn_dn.png</file>
+    <file>skins/recbtn_nr.png</file>
+    <file>skins/Check_dn.png</file>
+    <file>skins/Check_nr.png</file>
+    <file>skins/Check_ov.png</file>
+    <file>skins/exit_nr.png</file>
+    <file>skins/exit_ov.png</file>
+    <file>skins/min_nr.png</file>
+    <file>skins/min_ov.png</file>
+    <file>skins/mouse_nr.png</file>
+    <file>skins/keybtn_nr.png</file>
+    <file>skins/keybtn_ov.png</file>
+    <file>skins/number1.png</file>
+    <file>skins/number2.png</file>
+    <file>skins/number3.png</file>
+    <file>skins/number4.png</file>
+    <file>skins/number5.png</file>
+    <file>skins/number6.png</file>
+    <file>skins/number7.png</file>
+    <file>skins/number8.png</file>
+    <file>skins/number9.png</file>
+    <file>skins/number10.png</file>
+    <file>skins/btn_nr.png</file>
+    <file>skins/btn_ov.png</file>
+    <file>skins/main_nr.png</file>
+  </qresource>
+</RCC>
